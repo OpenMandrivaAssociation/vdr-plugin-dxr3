@@ -2,7 +2,7 @@
 %define plugin	dxr3
 %define name	vdr-plugin-%plugin
 %define version	0.2.6
-%define rel	10
+%define rel	11
 
 Summary:	VDR plugin: Hardware MPEG decoder
 Name:		%name
