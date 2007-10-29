@@ -12,6 +12,8 @@ Group:		Video
 License:	GPL
 URL:		http://sourceforge.net/projects/dxr3plugin
 Source:		http://prdownloads.sourceforge.net/dxr3plugin/vdr-%plugin-%version.tar.bz2
+# (anssi 10/2007) fixes build with ffmpeg, from cvs
+Patch0:		vdr-dxr3-ffmpeg-register-all.patch
 BuildRoot:	%{_tmppath}/%{name}-buildroot
 BuildRequires:	vdr-devel >= 1.4.1-6
 BuildRequires:	ffmpeg-devel
@@ -25,6 +27,7 @@ card as the primary device of VDR.
 
 %prep
 %setup -q -n %plugin-%version
+%patch0 -p1
 
 %build
 %vdr_plugin_build FFMDIR="%{_includedir}/ffmpeg"
