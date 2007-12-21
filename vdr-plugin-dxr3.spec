@@ -14,6 +14,7 @@ URL:		http://sourceforge.net/projects/dxr3plugin
 Source:		http://prdownloads.sourceforge.net/dxr3plugin/vdr-%plugin-%version.tar.bz2
 # (anssi 10/2007) fixes build with ffmpeg, from cvs
 Patch0:		vdr-dxr3-ffmpeg-register-all.patch
+BuildRoot:	%{_tmppath}/%{name}-buildroot
 BuildRequires:	vdr-devel >= 1.4.1-6
 BuildRequires:	ffmpeg-devel
 BuildRequires:	em8300-devel
