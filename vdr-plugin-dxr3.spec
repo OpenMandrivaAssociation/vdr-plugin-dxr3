@@ -32,6 +32,7 @@ card as the primary device of VDR.
 %vdr_plugin_prep
 
 %build
+VDR_PLUGIN_FLAGS="%vdr_plugin_flags -I%{_includedir}/libavcodec"
 %vdr_plugin_build FFMDIR="%{_includedir}/ffmpeg"
 
 %install
