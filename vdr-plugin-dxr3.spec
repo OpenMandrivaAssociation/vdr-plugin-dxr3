@@ -1,8 +1,8 @@
 
 %define plugin	dxr3
 %define name	vdr-plugin-%plugin
-%define version	0.2.8
-%define rel	4
+%define version	0.2.9
+%define rel	1
 
 Summary:	VDR plugin: Hardware MPEG decoder
 Name:		%name
@@ -12,7 +12,6 @@ Group:		Video
 License:	GPL
 URL:		http://sourceforge.net/projects/dxr3plugin
 Source:		http://prdownloads.sourceforge.net/dxr3plugin/vdr-%plugin-%version.tgz
-Patch0:		dxr3-0.2.8-i18n-1.6.patch
 Patch1:		dxr3-subtitles.patch
 BuildRoot:	%{_tmppath}/%{name}-buildroot
 BuildRequires:	vdr-devel >= 1.6.0
@@ -27,7 +26,6 @@ card as the primary device of VDR.
 
 %prep
 %setup -q -n %plugin-%version
-%patch0 -p1
 %patch1 -p1
 %vdr_plugin_prep
 
