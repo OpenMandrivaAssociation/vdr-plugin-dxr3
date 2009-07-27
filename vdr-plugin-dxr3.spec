@@ -14,7 +14,7 @@ URL:		http://sourceforge.net/projects/dxr3plugin
 Source:		http://prdownloads.sourceforge.net/dxr3plugin/vdr-%plugin-%version.tgz
 Patch1:		dxr3-subtitles.patch
 BuildRoot:	%{_tmppath}/%{name}-buildroot
-BuildRequires:	vdr-devel >= 1.6.0
+BuildRequires:	vdr-devel >= 1.6.0-7
 BuildRequires:	ffmpeg-devel
 BuildRequires:	em8300-devel
 Requires:	vdr-abi = %vdr_abi
@@ -30,7 +30,7 @@ card as the primary device of VDR.
 %vdr_plugin_prep
 
 %build
-VDR_PLUGIN_FLAGS="%vdr_plugin_flags -I%{_includedir}/libavcodec"
+VDR_PLUGIN_EXTRA_FLAGS="-I%{_includedir}/libavcodec"
 %vdr_plugin_build FFMDIR="%{_includedir}/ffmpeg"
 
 %install
