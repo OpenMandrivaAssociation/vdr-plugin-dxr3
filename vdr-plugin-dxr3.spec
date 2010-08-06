@@ -30,7 +30,7 @@ card as the primary device of VDR.
 %vdr_plugin_prep
 
 %build
-VDR_PLUGIN_EXTRA_FLAGS="-I%{_includedir}/libavcodec"
+VDR_PLUGIN_EXTRA_FLAGS="-I%{_includedir}/libavcodec -D__STDC_CONSTANT_MACROS"
 %vdr_plugin_build FFMDIR="%{_includedir}/ffmpeg"
 
 %install
