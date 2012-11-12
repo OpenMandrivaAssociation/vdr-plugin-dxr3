@@ -1,0 +1,12 @@
+Index: dxr3-0.2.8/dxr3osd_subpicture.h
+===================================================================
+--- dxr3-0.2.8/dxr3osd_subpicture.h
++++ dxr3-0.2.8/dxr3osd_subpicture.h	2008-04-25 14:08:59.000000000 +0300
+@@ -27,6 +27,7 @@
+ 
+     eOsdError CanHandleAreas(const tArea *Areas, int NumAreas);
+     eOsdError SetAreas(const tArea *Areas, int NumAreas);
++    bool CanHandleOver2BitSubtitles(void) { return false; }
+ 
+     void Flush();
+ };
