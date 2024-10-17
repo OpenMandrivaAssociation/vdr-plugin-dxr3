@@ -10,7 +10,7 @@ Version:	%version
 Release:	%mkrel %rel
 Group:		Video
 License:	GPL
-URL:		http://sourceforge.net/projects/dxr3plugin
+URL:		https://sourceforge.net/projects/dxr3plugin
 Source:		http://prdownloads.sourceforge.net/dxr3plugin/vdr-%plugin-%version.tgz
 # attaches to a hack hook in VDR to inform that the device can only
 # handle minimal OSD, fixing subtitling issues
